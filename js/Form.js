@@ -34,7 +34,7 @@ class Form{
             player.index = playerCount
             player.updateCount(playerCount);
             player.updateName();
-            this.saludos.html('hola ' + player.name);
+            this.saludos.html('Hola ' + player.name);
             this.saludos.position(630, 200);
            // this.botonR.show();
             

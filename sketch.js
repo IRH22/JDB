@@ -6,9 +6,16 @@ var playerCount;
 var allplayers;
 var piso;
 var fondo;
+var vaquita, osito, pinguino;
+var vaquitaI, ositoI, pinguinoI;
+var botargas = [];
 
 function preload(){
     fondo = loadImage("images/Fondo.png");
+
+    vaquitaI = loadImage("../images/Vaquita.png");
+    ositoI = loadImage("../images/osito.png");
+    pinguinoI = loadImage("../images/pinguino.png");
 }
 
 
