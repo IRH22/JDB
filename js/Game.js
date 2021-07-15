@@ -33,16 +33,22 @@ class Game{
             form.display();
         }
         
-    }
+    
 
     vaquita = createSprite(700, 400, 20, 20);
     osito = createSprite(780, 400, 20, 20);
-    pinguino = createSprite(940, 420, 20, 20);
+    pinguino = createSprite(840, 400, 20, 20);
 
     vaquita.addImage("va", vaquitaI);
+    pinguino.addImage("pingu", pinguinoI);
     //osito.addImage("oso", ositoI);
 
+    vaquita.scale = 0.2
+    pinguino.scale =0.4
+
     botargas = [vaquita, osito, pinguino];
+    
+}
 
     play(){
         form.hide();
@@ -71,6 +77,9 @@ class Game{
                 index += 1;
                 x += 225;
                 y =displayHeight - allplayers [plr].distance;
+
+                botargas[index-1].x = X;
+                botargas[index-1].y = y;
 
 
                 if(index === player.index){
