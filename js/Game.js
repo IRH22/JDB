@@ -35,6 +35,15 @@ class Game{
         
     }
 
+    vaquita = createSprite(700, 400, 20, 20);
+    osito = createSprite(780, 400, 20, 20);
+    pinguino = createSprite(940, 420, 20, 20);
+
+    vaquita.addImage("va", vaquitaI);
+    //osito.addImage("oso", ositoI);
+
+    botargas = [vaquita, osito, pinguino];
+
     play(){
         form.hide();
         textSize(25);
