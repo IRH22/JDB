@@ -25,7 +25,7 @@ function setup(){
     game = new Game();
     game.getState();
     game.start();
-    canvas = createCanvas(displayWidth-20, displayHeight-170);
+    canvas = createCanvas(displayWidth, displayHeight-170);
 }
 
 function draw(){
