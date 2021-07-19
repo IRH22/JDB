@@ -4,8 +4,6 @@ class Form{
         this.inputN = createInput("Nombre");
         this.botonP = createButton("Continuar")
         this.saludos = createElement('h3');
-        this.botonR = createButton("Reiniciar")
-        this.botonR.hide();
     }
 
     hide(){
@@ -42,14 +40,6 @@ class Form{
             
         })
 
-        this.botonR.mousePressed(()=>{
-            player.updateCount(0);
-            game.updateState(0);
-            Player.delete();
-            window.location.reload();
-
-        })
-        
     }
 
   

@@ -1,4 +1,6 @@
 body, html {
+  margin: 0;
+  padding: 0;
   height: 99%;
   background-repeat: no-repeat;
   background: url(images/Fondo.png) no-repeat center center fixed;
@@ -6,11 +8,9 @@ body, html {
 }
 canvas{ 
 
-  margin-left: -9px;
-  margin-right: -9px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-
+  display: flex;
+  align-self: center;
+  margin: auto;
  } 
 
 h2 { 
