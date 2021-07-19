@@ -33,14 +33,19 @@ class Game{
             form.display();
         }
         
-    vaquita2 = createSprite(700, 400, 20, 20);
-    osito = createSprite(780, 400, 20, 20);
+    vaquita2 = createSprite(800, 400, 20, 20);
+    osito = createSprite(980, 400, 20, 20);
     pinguino = createSprite(940, 420, 20, 20);
 
-   // vaquita2.addImage(vaquitaI);
+    vaquita2.addImage("vaq", vaquitaI);
     osito.addImage("oso", ositoI);
+    pinguino.addImage("pingu", pinguinoI);
 
-    botargas = [vaquita, osito, pinguino];
+    vaquita2.scale = 0.4;
+    osito.scale = 0.4;
+    pinguino.scale = 0.4; 
+
+    botargas = [vaquita2, osito, pinguino];
     }
 
 
@@ -53,11 +58,12 @@ class Game{
         var displayPos = 150;
         if(allplayers != undefined){
             background("white");
+            //image(pisoI, 0, displayWidth, displayHeight)
             textSize(25);
 
             var index = 0;
-            var x = 195;
-            var y;
+            var y = 195;
+            var x;
 
             for(var plr in allplayers){
                 if (plr === "player" + player.index)
@@ -69,22 +75,24 @@ class Game{
                 displayPos += 30;
 
                 index += 1;
-                x += 225;
-                y =displayHeight - allplayers [plr].distance;
+                y += 225;
+                x =displayWidth + allplayers [plr].distance;
 
+                botargas[index-1].x = x;
+                botargas[index-1].y = y;
 
                 if(index === player.index){
                     stroke(7)
                     fill("#18adb5")
                     ellipse(x, y, 70, 70);
-                    camera.position.x = displayWidth/2;
-                    
+                    camera.position.y = displayHeight/2;
+                    camera.position.x = botargas[index-1].x;
                 }
             }
 
         }
 
-        if(keyIsDown(UP_ARROW)&& player.index != null && player.distance<3080){
+        if(keyIsDown(RIGHT_ARROW)&& player.index != null && player.distance<3000){
             player.distance += 50;
             player.updateName();           
         }

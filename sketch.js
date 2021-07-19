@@ -4,7 +4,7 @@ var form, player, game;
 var gameState = 0;
 var playerCount;
 var allplayers;
-var piso;
+var piso, pisoI;
 var fondo;
 var vaquita2, osito, pinguino;
 var vaquitaI, ositoI, pinguinoI;
@@ -14,8 +14,9 @@ function preload(){
     fondo = loadImage("images/Fondo.png");
 
     vaquitaI = loadImage("../images/Vaquita.png");
-    ositoI = loadImage("../images/osito.png");
+    ositoI = loadImage("../images/ositoB.png");
     pinguinoI = loadImage("../images/pinguino.png");
+    pisoI = loadImage("../images/pista.png");
 }
 
 
