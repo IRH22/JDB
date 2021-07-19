@@ -6,6 +6,7 @@ var playerCount;
 var allplayers;
 var piso;
 var fondo;
+var pista, pistaI;
 var vaquita, osito, pinguino;
 var vaquitaI, ositoI, pinguinoI;
 var botargas = [];
@@ -16,6 +17,7 @@ function preload(){
     vaquitaI = loadImage("../images/Vaquita.png");
     ositoI = loadImage("../images/osito.png");
     pinguinoI = loadImage("../images/pinguino.png");
+    pistaI = loadImage("../images/pista.png");
 }
 
 
@@ -25,7 +27,7 @@ function setup(){
     game = new Game();
     game.getState();
     game.start();
-    canvas = createCanvas(displayWidth, displayHeight-170);
+    canvas = createCanvas(displayWidth-20 , displayHeight-170);
 }
 
 function draw(){

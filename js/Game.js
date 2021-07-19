@@ -33,8 +33,6 @@ class Game{
             form.display();
         }
         
-    
-
     vaquita = createSprite(700, 400, 20, 20);
     osito = createSprite(780, 400, 20, 20);
     pinguino = createSprite(840, 400, 20, 20);
@@ -87,6 +85,7 @@ class Game{
                     fill("#18adb5")
                     ellipse(x, y, 70, 70);
                     camera.position.x = displayWidth/2;
+                    camera.position.y = cars[index-1].y;
                     
                 }
             }
