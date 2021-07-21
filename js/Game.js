@@ -33,9 +33,9 @@ class Game{
             form.display();
         }
         
-    vaquita2 = createSprite(800, 400, 20, 20);
-    osito = createSprite(980, 400, 20, 20);
-    pinguino = createSprite(940, 420, 20, 20);
+    vaquita2 = createSprite(1800, 400, 20, 20);
+    osito = createSprite(1980, 400, 20, 20);
+    pinguino = createSprite(1940, 420, 20, 20);
 
     vaquita2.addImage("vaq", vaquitaI);
     osito.addImage("oso", ositoI);
@@ -53,6 +53,7 @@ class Game{
         form.hide();
         textSize(25);
         text("Inicia", 200, 50);
+        
         // llamar info de los jugadores
         Player.getPlayerInfo();
         var displayPos = 150;

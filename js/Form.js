@@ -1,7 +1,7 @@
 class Form{
     constructor(){
         this.titulo = createElement('h2');
-        this.inputN = createInput("Nombre");
+        this.inputN =  createInput("").attribute("placeholder", "Nombre");
         this.botonP = createButton("Continuar")
         this.saludos = createElement('h3');
         this.botonR = createButton("Reiniciar");
@@ -24,6 +24,8 @@ class Form{
 
         this.botonP.position(630, 370);
 
+        this.botonR.position(630, 370);
+
         this.botonP.mousePressed(()=>{
             //lo que pasa si se aprieta
             document.body.style.backgroundColor = "#0000FF";
@@ -38,7 +40,7 @@ class Form{
             player.updateName();
             this.saludos.html('Hola ' + player.name);
             this.saludos.position(630, 200);
-           // this.botonR.show();
+            this.botonR.show();
             
         })
 
