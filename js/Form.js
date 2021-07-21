@@ -24,7 +24,7 @@ class Form{
 
         this.botonP.position(630, 370);
 
-        this.botonR.position(630, 370);
+        this.botonR.position(50, 70);
 
         this.botonP.mousePressed(()=>{
             //lo que pasa si se aprieta

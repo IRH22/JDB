@@ -4,7 +4,7 @@ var form, player, game;
 var gameState = 0;
 var playerCount;
 var allplayers;
-var piso, pisoI;
+var pista, pisoI;
 var fondo;
 var vaquita2, osito, pinguino;
 var vaquitaI, ositoI, pinguinoI;
