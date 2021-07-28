@@ -31,7 +31,7 @@ function setup(){
 }
 
 function draw(){
-    if(playerCount === 2){
+    if(playerCount === 3){
         game.updateState(1);
     }
  

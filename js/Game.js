@@ -33,9 +33,9 @@ class Game{
             form.display();
         }
         
-    vaquita2 = createSprite(100, 480, 20, 20);
-    osito = createSprite(100, 400, 20, 20);
-    pinguino = createSprite(100, 380, 20, 20);
+    vaquita2 = createSprite(150, 200, 20, 20);
+    osito = createSprite(150, 380, 20, 20);
+    pinguino = createSprite(150, 560, 20, 20);
 
     vaquita2.addImage("vaq", vaquitaI);
     osito.addImage("oso", ositoI);
@@ -46,8 +46,8 @@ class Game{
     pinguino.depth = 5;
 
     vaquita2.scale = 0.4;
-    osito.scale = 0.4;
-    pinguino.scale = 0.8; 
+    osito.scale = 0.35;
+    pinguino.scale = 0.7; 
 
     botargas = [vaquita2, osito, pinguino];
 
@@ -67,11 +67,11 @@ class Game{
         if(allplayers != undefined){
             background("white");
             //image(pisoI, 0, displayWidth, displayHeight) 
-            pista = createSprite(displayWidth/2, displayHeight/2, 40, 50);
+            pista = createSprite(1700, displayHeight/2, 40, 50);
             pista.addImage(pisoI);
             pista.scale = 1.5
             pista.depth = 1;
-            pista.displayWidth = 800
+            pista.displayWidth = 2000
             vaquita2.visible = true;
             osito.visible = true;
             pinguino.visible = true;
@@ -79,7 +79,7 @@ class Game{
             
 
             var index = 0;
-            var y = 195;
+            var y = 40;
             var x;
 
             for(var plr in allplayers){
@@ -92,7 +92,7 @@ class Game{
                 displayPos += 30;
 
                 index += 1;
-                y += 225;
+                y += 160;
                 x =displayWidth + allplayers [plr].distance;
 
                 botargas[index-1].x = x;
